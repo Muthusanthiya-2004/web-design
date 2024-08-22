@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        .box{
+            width: 30%;
+            height: 560px;
+            margin-left: 35%;
+            background-color: rgb(206, 198, 198);
+            border-radius: 10px;
+        }
+        input[type=text]{
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 5%;
+            height: 120px;
+            font-size: 50px;
+        }
+        .buttons{
+            width: 87%;
+            margin-left: 5%;
+            margin-top: 5%;
+            height: 370px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            background-color: rgba(239, 239, 239,0.3);
+            padding: 5px;
+        }
+        button[type=button]{
+            width: 23%;
+            height: 20%;
+            background-color: skyblue;
+            border-radius: 20px;
+        }
+        .last{
+            background-color: rgb(55, 151, 50);
+            width: 23%;
+            height: 20%;
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button type="button" onclick="ad('+')">+</button>
+            <button type="button" onclick="ad('-')">-</button>
+            <button type="button" onclick="ad('*')">*</button>
+            <button type="button" onclick="ad('/')">/</button>
+            <button type="button" onclick="ad('1')">1</button>
+            <button type="button" onclick="ad('2')">2</button>
+            <button type="button" onclick="ad('3')">3</button>
+            <button type="button" onclick="ad('4')">4</button>
+            <button type="button" onclick="ad('5')">5</button>
+            <button type="button" onclick="ad('6')">6</button>
+            <button type="button" onclick="ad('7')">7</button>
+            <button type="button" onclick="ad('8')">8</button>
+            <button type="button" onclick="ad('9')">9</button>
+            <button type="button" onclick="ad('0')">0</button>
+            <button type="button" onclick="clearDisplay()">C</button>
+            <button class="last" onclick="eqal('=')">=</button>
+
+        </div>
+    </div>
+    <script>
+        function ad(value){
+            document.getElementById('display').value+=value;
+        }
+        function clearDisplay(){
+            document.getElementById('display').value='';
+        }
+        function eqal(value){
+            document.getElementById('display');
+            display.value=eval(display.value);
+        }
+    </script>
+</body>
+</html>
